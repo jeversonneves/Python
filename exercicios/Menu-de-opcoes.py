@@ -1,16 +1,21 @@
+from time import sleep
+
 primeiroValor = int(input('Primeiro valor: '))
 segundoValor = int(input('Segundo valor: '))
 
 sair = False
 
 while not sair:
-    print('')
-    print('   [ 1 ] somar')
-    print('   [ 2 ] multiplicar')
-    print('   [ 3 ] maior')
-    print('   [ 4 ] novos números')
-    print('   [ 5 ] sair do programa')
-    print('')
+    print('''
+    
+       [ 1 ] somar
+       [ 2 ] multiplicar
+       [ 3 ] maior
+       [ 4 ] novos números
+       [ 5 ] sair do programa
+       
+    ''')
+    
     menu = int(input('>>> Qual é a sua opção? '))
 
     if menu == 5:
@@ -29,8 +34,11 @@ while not sair:
             maior = segundoValor
             print('O maior entre {} e {} é {}'.format(primeiroValor, segundoValor, maior))
     elif menu == 4:
+        print('Informe os números novamente:')
         primeiroValor = int(input('Primeiro valor: '))
         segundoValor = int(input('Segundo valor: '))
     else:
         print('Opção inválida. Tente novamente')
+    print('=-=' * 10)
+    sleep(2)
 print('Fim do programa! Volte sempre!')
