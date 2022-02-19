@@ -1,11 +1,13 @@
-n = resultado = 0
-
 while True:
-    n = int(input('Quer ver a tabuada de qual valor? '))
-    if n < 0:
-        print('PROGRAMA TABUADA ENCERRADO. Volte sempre!')
+    numero = int(input('Quer ver a tabuada de qual valor: '))
+    print(f'-' * 20)
+    if numero < 0:
+        print('Programa Tabuada Encerrado. Volte Sempre!')
         break
-    print('-' * 30)
-    for i in range(1, 11):
-        resultado = n * i
-        print(f'{n} x {i} = {resultado}')
+    for i in range(0, 10):
+        i += 1
+        multiplicacao = numero * i
+        
+        print(f'{numero} x {i} = {multiplicacao}')
+    print(f'-' * 20)
+
